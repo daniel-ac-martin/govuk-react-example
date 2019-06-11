@@ -6,7 +6,7 @@
     "final-form": "^4.12.0",
     "glamor": "^2.20.40",
     "govuk-colours": "^1.0.3",
-    "lev-react-components": "UKHomeOffice/lev-react-components",
+    "lev-react-components": "0.2.0",
     "normalize.css": "^8.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
