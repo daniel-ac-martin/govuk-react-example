@@ -7,16 +7,19 @@ import {
   Breadcrumb,
   Button,
   Checkbox,
-  DateInput,
+  DateField,
   FileUpload,
+  Footer,
   GridCol,
   GridRow,
   Header,
   InputField,
   Layout,
+  LevPage,
   ListItem,
   ListNavigation,
   MultiChoice,
+  Page,
   Pagination,
   PhaseBanner,
   Radio,
@@ -24,7 +27,7 @@ import {
   Select,
   TextArea,
   UnorderedList,
-} from 'govuk-react';
+} from 'lev-react-components';
 
 import PropTypes from 'prop-types';
 
@@ -133,7 +136,37 @@ class CheckboxGroup extends React.Component {
   }
 }
 
+const AppX = () => (
+  <LevPage title="Hello">
+    <p>Hello world!</p>
+  </LevPage>
+);
+
+const topnav = {
+  serviceTitleText: 'Life Event Verification',
+  department: 'HMPO',
+  links: [
+    {
+      text: 'Birth',
+      link: './birth'
+    },
+    {
+      text: 'Death',
+      link: './death'
+    },
+    {
+      text: 'Marriage',
+      link: './marriage'
+    },
+    {
+      text: 'Civil partnership',
+      link: './partnership'
+    }
+  ]
+};
+
 const App = () => (
+    <LevPage title="Hello" topnav={topnav}>
   <div>
     <Layout>
       <GridRow>
@@ -365,9 +398,9 @@ const App = () => (
       <GridRow>
         <GridCol>
           <Header id="dateInput" level="3">Date input</Header>
-          <DateInput hintText="For example, dd mm yyyy">
+          <DateField hintText="For example, dd mm yyyy">
             What is your date of birth?
-          </DateInput>
+          </DateField>
         </GridCol>
       </GridRow>
       <GridRow>
@@ -424,6 +457,7 @@ const App = () => (
       )}
     />
   </div>
+  </LevPage>
 );
 
 export default App;
